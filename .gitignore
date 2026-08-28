@@ -1,0 +1,17 @@
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+*.jks
+*.keystore
+.tmp_jar/
+app/debug/
+first.txt
+docs/MiniPanelDemo_内部交付文档.md

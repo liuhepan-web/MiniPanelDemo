@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="demo_app_name">小程序Demo</string>
+    <string name="demo_login_error">登录失败 [%1$s] %2$s</string>
+    <string name="demo_hub_subtitle">以下为同级入口。请先设置当前家庭（云端列表）。</string>
+    <string name="demo_profile_title">个人信息（SDK）</string>
+    <string name="demo_profile_fmt">昵称：%1$s\n邮箱：%2$s\n手机：%3$s</string>
+    <string name="demo_user_null">无缓存用户</string>
+    <string name="demo_btn_profile">1. 个人信息</string>
+    <string name="demo_btn_home">2. 设置当前家庭</string>
+    <string name="demo_btn_activator">3. 设备配网（业务包）</string>
+    <string name="demo_btn_devices">4. 设备列表 → 面板</string>
+    <string name="demo_btn_miniapp">5. 按 App ID 打开小程序</string>
+    <string name="demo_btn_logout">退出登录</string>
+    <string name="demo_btn_chanl">注销账号</string>
+    <string name="demo_need_home">请先选择家庭。</string>
+    <string name="demo_panel_missing">面板服务未就绪，请检查 panel 依赖。</string>
+    <string name="demo_load_devices_error">加载设备失败：%1$s</string>
+    <string name="demo_home_list_error">加载家庭列表失败：%1$s</string>
+    <string name="demo_home_selected">已保存当前家庭，业务包家庭服务已同步。</string>
+    <string name="demo_miniapp_title">小程序 App ID</string>
+    <string name="demo_miniapp_hint">填写涂鸦开发者平台中的小程序 ID</string>
+    <string name="demo_miniapp_empty">App ID 为空</string>
+    <string name="demo_login_title">登录</string>
+    <string name="demo_country">国家码</string>
+    <string name="demo_account">邮箱或手机号</string>
+    <string name="demo_password">密码</string>
+    <string name="demo_login_btn">登录</string>
+
+
+
+
+
+    <string name="user_login">登录</string>
+    <string name="user_country_code">国家码</string>
+    <string name="user_account_tips">邮箱或手机号</string>
+    <string name="user_password">密码</string>
+    <string name="user_forget_password_tips">忘记密码？</string>
+    <string name="user_register">注册</string>
+    <string name="user_verification_code">验证码</string>
+    <string name="user_send_code">发送验证码</string>
+    <string name="user_reset_password">重置密码</string>
+    <string name="user_new_password">新密码</string>
+
+    <string name="user_info_title">用户信息</string>
+    <string name="user_name">用户名</string>
+    <string name="user_phone_number">手机</string>
+    <string name="user_email_address">邮箱</string>
+    <string name="user_time_zone">时区</string>
+    <string name="user_management">用户管理</string>
+    <string name="user_logout">登出</string>
+
+    <string name="app_version_tips">版本号: %s</string>
+
+    <string name="user_update_coordinate">更新坐标</string>
+    <string name="user_unit_temperature">温度单位</string>
+    <string name="user_deactivate_account">停用账号</string>
+
+    <string name="user_country_China">中国</string>
+    <string name="user_country_America">美国</string>
+    <string name="user_country_English">英国</string>
+    <string name="user_country_Australia">澳大利亚</string>
+    <string name="user_country_Japan">日本</string>
+    <string name="user_country_Egypt">埃及</string>
+
+
+    <string name="demo_go_register">没有账号？去注册</string>
+
+    <string name="demo_send_code_error">发送验证码失败 %1$s %2$s</string>
+
+    <string name="demo_send_verify_code">获取验证码</string>
+
+
+    <string name="demo_register_error">注册失败 %1$s %2$s</string>
+
+    <string name="demo_home_picker_title">选择家庭</string>
+    <string name="demo_home_empty_need_create">暂无家庭。请先点击下方「创建家庭」，创建成功后再在列表中选择。</string>
+    <string name="demo_home_create_home">创建家庭</string>
+    <string name="demo_home_create_confirm">创建</string>
+    <string name="demo_home_name_hint">家庭名称</string>
+    <string name="demo_home_name_required">请输入家庭名称</string>
+    <string name="demo_home_city_hint">城市（选填）</string>
+    <string name="demo_home_default_city">上海</string>
+
+    <string name="demo_home_create_success">创建成功</string>
+    <string name="demo_home_create_fail">创建失败：%1$s</string>
+
+    <string name="demo_remember_credentials">记住账号和密码</string>
+
+    <string name="demo_remove_device_title">移除设备</string>
+    <string name="demo_remove_device_message">确定从家庭移除该设备？</string>
+    <string name="demo_remove_device_success">已移除设备</string>
+    <string name="demo_remove_device_error">移除失败：%1$s</string>
+
+
+
+</resources>

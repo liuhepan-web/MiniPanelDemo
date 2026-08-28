@@ -1,0 +1,191 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
+}
+
+def localProps = new Properties()
+def localPropsFile = rootProject.file("local.properties")
+if (localPropsFile.exists()) {
+    localPropsFile.withInputStream { localProps.load(it) }
+}
+
+android {
+    // Signing from local.properties — do not hardcode passwords in the repo
+    def keystorePath = localProps.getProperty("KEYSTORE_FILE", "")
+    if (keystorePath) {
+        signingConfigs {
+            debug {
+                storeFile file(keystorePath)
+                storePassword localProps.getProperty("KEYSTORE_PASSWORD", "")
+                keyAlias localProps.getProperty("KEY_ALIAS", "key0")
+                keyPassword localProps.getProperty("KEY_PASSWORD", "")
+            }
+        }
+    }
+    namespace 'com.example.minipaneldemo'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.hallmond"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // PACKAGE_NAME: thingsmart-personal-message deep link host
+        // AppKey / AppSecret: from local.properties
+        manifestPlaceholders = [
+                PACKAGE_NAME      : applicationId,
+                TUYA_SMART_APPKEY : localProps.getProperty("appKey", ""),
+                TUYA_SMART_SECRET : localProps.getProperty("appSecret", "")
+        ]
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+    }
+    packagingOptions {
+        jniLibs {
+            pickFirsts += ['lib/*/liblog.so', 'lib/*/libc++_shared.so', 'lib/*/libyuv.so', 'lib/*/libopenh264.so', 'lib/*/libv8wrapper.so', 'lib/*/libv8android.so']
+        }
+    }
+    packaging {
+        resources {
+            excludes += "META-INF/INDEX.LIST"
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        compose true
+    }
+    lint {
+        abortOnError false
+    }
+}
+
+configurations.all {
+    exclude group: "com.thingclips.smart" ,module: 'thingsmart-modularCampAnno'
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.lifecycle.runtime.ktx
+    implementation libs.androidx.activity.compose
+    implementation platform(libs.androidx.compose.bom)
+    implementation libs.androidx.ui
+    implementation libs.androidx.ui.graphics
+    implementation libs.androidx.ui.tooling.preview
+    implementation libs.androidx.material3
+
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    implementation 'com.alibaba:fastjson:1.1.67.android'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.14.9'
+
+    implementation 'com.thingclips.smart:thingsmart:7.8.0'
+
+    api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:7.8.14")
+    implementation 'com.thingclips.smart:thingsmart-bizbundle-panel'
+    api "com.thingclips.smart:thingsmart-bizbundle-camera"
+    api "com.thingclips.smart:thingsmart-bizbundle-miniapp"
+    api "com.thingclips.smart:thingsmart-bizbundle-homekit"
+    api "com.thingclips.smart:thingsmart-bizbundle-ipckit"
+    implementation "com.thingclips.smart:thingsmart-bizbundle-bizkit"
+    //设备控制相关能力-必选
+    implementation "com.thingclips.smart:thingsmart-bizbundle-devicekit"
+    // 固件 OTA UI 业务包 https://developer.tuya.com/cn/docs/app-development/ota?id=Ka8tzzkvhpwzx
+    implementation "com.thingclips.smart:thingsmart-bizbundle-ota"
+    implementation 'org.apache.ant:ant:1.10.5'
+//    implementation 'com.thingclips.smart:thingsmart-bizbundle-groupmanager'
+
+    implementation 'com.thingclips.smart:thingsmart-bizbundle-panelmore'
+    implementation "com.thingclips.smart:thingsmart-bizbundle-family"
+    implementation "com.thingclips.smart:thingsmart-bizbundle-p2pkit"
+    implementation "com.thingclips.smart:thingsmart-bizbundle-mapkit"
+
+    implementation 'com.thingclips.smart:thingsmart-bizbundle-ipckit'
+
+    implementation 'com.thingclips.smart:thingsmart-bizbundle-basekit'
+
+    implementation "com.thingclips.smart:thingsmart-theme-open:2.0.6"
+    implementation "com.thingclips.smart:thingsmart-bizbundle-aistreamkit"
+
+    implementation 'com.thingclips.smart:thingsmart-ipcsdk:7.8.1'
+    //智能体
+    api "com.thingclips.smart:thingsmart-bizbundle-ai_agent"
+    //配网   不是必须项
+    api "com.thingclips.smart:thingsmart-bizbundle-device_activator"
+    // 若需要使用扫一扫功能，则需要依赖扫码业务包
+    api "com.thingclips.smart:thingsmart-bizbundle-qrcode_mlkit"
+
+    implementation "com.thingclips.smart.plugin:tuniminihighwaymanager:3.4.3"
+
+
+}
+
+apply plugin: 'com.thingclips.open.theme'
+thingOpenTheme {
+    // 浅色模式配置
+    lightTheme {
+        color {
+            // 背景色
+            backgroundColor "#0000FF"
+            // 主题色
+            themeColor "#598DEB"
+            // 警告色
+            warningColor "#FF4444"
+            // 提示色
+            tipColor "#00CC99"
+            // 引导色
+            guideColor "#E819FA"
+
+
+            // tab选中背景色
+            tabBarSelectColor "#FF5A28"
+            // 导航栏背景色配置
+            navigationBarColor "#FFFFFF"
+        }
+        colorAlpha {
+            // 弹窗蒙层透明度
+            alertMaskAlpha 0.3
+        }
+    }
+//     深⾊模式配置
+//    blackTheme {
+//        color{
+//            // 背景⾊
+//            backgroundColor "#000000"
+//            // 主题⾊
+//            themeColor "#FF5A28"
+//            // 警告⾊
+//            warningColor "#FF4444"
+//            // 提示⾊
+//            tipColor "#00CC99"
+//            // 引导⾊
+//            guideColor "#1989FA"
+//            // tab选中背景⾊
+//            tabBarSelectColor "#FF5A28"
+//            // 导航栏背景⾊配置
+//            navigationBarColor "#1A1A1A"
+//        }
+//        colorAlpha{
+//            // 弹窗蒙层透明度
+//            alertMaskAlpha 0.8
+//        }
+//    }
+}

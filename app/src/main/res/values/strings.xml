@@ -1,0 +1,125 @@
+<resources>
+
+
+    <string name="demo_app_name">MiniApp Demo</string>
+
+
+
+    <string name="demo_hub_subtitle">All actions below are peers. Pick a home first (cloud list).</string>
+    <string name="demo_profile_title">Profile (SDK)</string>
+    <string name="demo_profile_fmt">Nickname: %1$s\nEmail: %2$s\nPhone: %3$s</string>
+    <string name="demo_user_null">No cached user.</string>
+
+    <string name="demo_btn_profile">1. User profile</string>
+    <string name="demo_btn_home">2. Set current home</string>
+    <string name="demo_btn_family_setting">3. Family settings</string>
+    <string name="demo_btn_activator">4. Device pairing (BizBundle)</string>
+    <string name="demo_btn_devices">5. Devices → panel</string>
+    <string name="demo_btn_miniapp">6. MiniApp by App ID</string>
+    <string name="demo_btn_miniapp_clear">7. Clear mini app cache</string>
+    <string name="demo_btn_ipc_cloud_vas">8. IPC cloud storage VAS</string>
+    <string name="demo_ipc_cloud_vas_title">IPC Cloud Storage VAS</string>
+    <string name="demo_ipc_cloud_vas_subtitle">Opens CATEGORY_CODE_SECURITY_CLOUD_SERVICE miniapp (VAS 2.0).</string>
+    <string name="demo_ipc_cloud_vas_dev_fmt">Device ID: %1$s</string>
+    <string name="demo_ipc_cloud_vas_open">Open cloud storage miniapp</string>
+    <string name="demo_ipc_cloud_vas_loading">Fetching VAS URL…</string>
+    <string name="demo_ipc_cloud_vas_opening">Opening miniApp…</string>
+    <string name="demo_ipc_cloud_vas_empty_url">VAS URL is empty</string>
+    <string name="demo_ipc_cloud_vas_fail">Fetch VAS URL failed, errCode=%1$d</string>
+    <string name="demo_ipc_cloud_vas_sdk_missing">ThingIPCSdk.getIPCVAS() is null. Check ipcsdk dependency.</string>
+    <string name="demo_vconsole_label">vConsole debug</string>
+    <string name="demo_vconsole_hint">Enable only during development; disable for release builds.</string>
+    <string name="demo_miniapp_clear_title">Clear mini app cache?</string>
+    <string name="demo_miniapp_clear_message">Removes all locally stored mini app packages and cache. The next open will re-download.</string>
+    <string name="demo_miniapp_clear_success">Mini app cache cleared</string>
+    <string name="demo_vconsole_on">vConsole enabled</string>
+    <string name="demo_vconsole_off">vConsole disabled</string>
+    <string name="demo_btn_logout">Logout</string>
+
+    <string name="demo_need_home">Select a home first (button “Set current home”).</string>
+    <string name="demo_panel_missing">Panel service missing.</string>
+    <string name="demo_load_devices_error">Load devices failed: %1$s</string>
+    <string name="demo_home_list_error">Load home list failed: %1$s</string>
+    <string name="demo_home_selected">Home saved. BizBundle family updated.</string>
+
+    <string name="demo_miniapp_title">MiniApp App ID</string>
+    <string name="demo_miniapp_hint">Paste app id from Tuya console</string>
+    <string name="demo_miniapp_sample_id" translatable="false">已本地设置</string>
+    <string name="demo_miniapp_empty">App ID is empty</string>
+
+    <string name="demo_login_title">Login</string>
+    <string name="demo_country">Country code</string>
+    <string name="demo_account">Email or phone</string>
+    <string name="demo_password">Password</string>
+    <string name="demo_login_btn">Sign in</string>
+
+
+
+
+    <string name="user_login">Login</string>
+    <string name="user_country_code">Country Code</string>
+    <string name="user_account_tips">Email Address or Phone Number</string>
+    <string name="user_password">Password</string>
+    <string name="user_forget_password_tips">Forget Password?</string>
+    <string name="user_register">Register</string>
+    <string name="user_verification_code">Verification Code</string>
+    <string name="user_send_code">Send Verification Code</string>
+    <string name="user_reset_password">Reset Password</string>
+    <string name="user_new_password">Reset Password</string>
+
+    <string name="user_info_title">User Information</string>
+    <string name="user_name">User Name</string>
+    <string name="user_phone_number">Phone Number</string>
+    <string name="user_email_address">Email Address</string>
+
+    <string name="user_management">USER MANAGEMENT</string>
+    <string name="user_logout">Logout</string>
+
+    <string name="user_time_zone">Time Zone</string>
+    <string name="user_unit_temperature">Unit of Temperature</string>
+    <string name="app_version_tips">SDK Ver: %s</string>
+
+
+    <string name="user_update_coordinate">Update Geographic Coordinate</string>
+    <string name="user_deactivate_account">Deactivate Account</string>
+
+    <string name="user_country_China">China</string>
+    <string name="user_country_America">America</string>
+    <string name="user_country_English">English</string>
+    <string name="user_country_Australia">Australia</string>
+    <string name="user_country_Japan">Japan</string>
+    <string name="user_country_Egypt">Egypt</string>
+    <string name="demo_btn_chanl">chanl Account</string>
+    <string name="demo_login_error">Login failed: %1$s %2$s</string>
+    <string name="demo_go_register">No account? Register</string>
+
+    <string name="demo_send_code_error">Failed to send verification code %1$s %2$s</string>
+
+    <string name="demo_send_verify_code">get code</string>
+
+    <string name="demo_register_error">fail to register %1$s %2$s</string>
+
+
+    <string name="demo_home_picker_title">Choose home</string>
+    <string name="demo_home_empty_need_create">No home yet. Tap \"Create home\" below, then select a home from the list.</string>
+    <string name="demo_home_create_home">Create home</string>
+    <string name="demo_home_create_confirm">Create</string>
+    <string name="demo_home_name_hint">Home name</string>
+    <string name="demo_home_name_required">Please enter a home name</string>
+    <string name="demo_home_city_hint">City (optional)</string>
+    <string name="demo_home_default_city">Shanghai</string>
+
+    <string name="demo_home_create_success">Home created</string>
+    <string name="demo_home_create_fail">Create failed: %1$s</string>
+
+    <string name="demo_remember_credentials">Remember account and password</string>
+
+    <string name="demo_remove_device_title">Remove device</string>
+    <string name="demo_remove_device_message">Remove this device from the home?</string>
+    <string name="demo_remove_device_success">Device removed</string>
+    <string name="demo_remove_device_error">Remove failed: %1$s</string>
+
+    <string name="demo_btn_ota">OTA</string>
+    <string name="demo_ota_service_missing">OTA service missing. Add thingsmart-bizbundle-ota.</string>
+    <string name="demo_ota_not_supported">This device does not support in-app firmware upgrade.</string>
+</resources>

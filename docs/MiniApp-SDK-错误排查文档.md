@@ -1,11 +1,11 @@
-# 涂鸦 MiniApp SDK（安卓）培训文档
+# 涂鸦 MiniApp SDK（安卓）错误排查文档
 
 > **对象**：安卓客户端开发 / 技术支持 / 对接同学  
 > **依据**：  
 > - [集成 SDK 官方文档](https://developer.tuya.com/cn/docs/app-development/mini-app-sdk-integration?id=Kcwzmgsmy3zg4)  
-> - 本仓库 `MiniPanelDemo2` 实战代码  
+> - 本仓库 `MiniPanelDemo` 实战代码  
 > - 内部 Wiki：面板小程序报错排查 / APP 跳转小程序问题 / 小程序启动错误码排查 / 配网日志 TAG 总结  
-> **目标**：完成 MiniApp SDK 集成与打开闭环，并能按标准流程排查跳转失败、版本不匹配、启动错误码等问题
+> **目标**：按标准流程排查小程序打不开、跳转失败、kit 版本不匹配、启动错误码、面板白屏等问题；并附集成对照清单便于定位缺依赖
 
 ---
 
@@ -454,7 +454,7 @@ iOS 失败可关注：`ThingSmartActivatorDiscoveryError`（另有专门文档�
 4. [小程序：启动错误码排查](https://wiki.tuya-inc.com:7799/page/1930436822635122749)  
 5. [配网日志 TAG 总结](https://wiki.tuya-inc.com:7799/page/1939929681113382958)  
 6. 小程序 kit 依赖查询：[relevance](https://mini.tuya-inc.com:7799/relevance)  
-7. 本仓库：`MiniPanelDemo2`
+7. 本仓库：`MiniPanelDemo`
 
 ---
 
@@ -480,4 +480,4 @@ A：关 `setDebugMode`、关 vConsole；勿日志输出 Token / uid 敏感细节
 
 ---
 
-*文档版本：基于 MiniPanelDemo2（BizBundlesBom 7.8.14）、官方集成文档与上述内部 Wiki 整理。*
+*文档版本：基于 MiniPanelDemo（BizBundlesBom 7.8.14）、官方集成文档与上述内部 Wiki 整理。定位为错误排查手册。*

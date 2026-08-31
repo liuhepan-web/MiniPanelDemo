@@ -1,14 +1,14 @@
 # MiniPanel Demo · 操作文档
 
 > 与当前仓库代码同步。集成细节见：[MiniPanelDemo_SDK_集成文档.md](./MiniPanelDemo_SDK_集成文档.md)  
-> 仓库：https://github.com/liuhepan-web/MiniPanelDemo2  
+> 仓库：https://github.com/liuhepan-web/MiniPanelDemo
 > 官方参考：[应用内多语言切换](https://github.com/tuya/tuya-ui-bizbundle-android-demo/blob/feature/setLanguage/docs/%E5%BA%94%E7%94%A8%E5%86%85%E5%A4%9A%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2.md) · [IPC 增值服务 2.0](https://developer.tuya.com/cn/docs/app-development/ipc-value-added-service-2?id=Ke2iaqr2xoyz5)
 
 ---
 
 ## 1. 运行前准备
 
-1. Android Studio 打开工程根目录 `MiniPanelDemo2`。
+1. Android Studio 打开工程根目录 `MiniPanelDemo`。
 2. `app/libs/` 放入平台下发的 **安全算法包** AAR（若平台要求）。
 3. IoT 平台 App 包名设为 `com.example.hallmond`，并绑定当前调试证书 **SHA256**。
 4. 配置 `local.properties`（勿提交）：

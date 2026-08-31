@@ -36,7 +36,7 @@ app/src/main/java/com/example/minipaneldemo/
     └── LocaleHelper.java          # 应用内多语言
 ```
 
-培训补充材料：`docs/MiniApp-SDK-培训文档.md`。
+错误排查补充材料：`docs/MiniApp-SDK-错误排查文档.md`。
 
 ---
 

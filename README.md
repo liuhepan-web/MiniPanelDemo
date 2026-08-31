@@ -10,7 +10,7 @@
 |------|------|
 | [操作文档](docs/MiniPanelDemo_操作文档.md) | Hub 流程、配网、小程序、IPC 云存储 VAS、**应用内多语言**、验收清单 |
 | [集成文档](docs/MiniPanelDemo_SDK_集成文档.md) | 依赖 7.8.x、初始化、权限、LocaleHelper、VAS API 与代码映射 |
-| [MiniApp 培训文档](docs/MiniApp-SDK-培训文档.md) | MiniApp 集成与排障补充 |
+| [MiniApp 错误排查文档](docs/MiniApp-SDK-错误排查文档.md) | 打不开 / kit 不匹配 / 启动错误码 / 白屏等排查 |
 
 ## 环境要求
 
@@ -23,8 +23,8 @@
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/liuhepan-web/MiniPanelDemo2.git
-   cd MiniPanelDemo2
+   git clone https://github.com/liuhepan-web/MiniPanelDemo.git
+   cd MiniPanelDemo
    ```
 2. **配置密钥（勿提交）**
    ```bash

@@ -211,11 +211,6 @@ A：关 `setDebugMode`、关 vConsole；勿日志输出 Token / uid 敏感细节
 
 1. [MiniApp SDK 集成（安卓）](https://developer.tuya.com/cn/docs/app-development/mini-app-sdk-integration?id=Kcwzmgsmy3zg4)  
 2. [面板小程序报错排查](https://wiki.tuya-inc.com:7799/page/2036733014322450447)  
-3. [APP-跳转小程序问题](https://wiki.tuya-inc.com:7799/page/2038527549503438922)  
-4. [小程序：启动错误码排查](https://wiki.tuya-inc.com:7799/page/1930436822635122749)  
-5. 小程序 kit 依赖查询：[relevance](https://mini.tuya-inc.com:7799/relevance)  
-6. 本仓库：https://github.com/liuhepan-web/MiniPanelDemo  
-
 ---
 
 *文档版本：基于 MiniPanelDemo（BizBundlesBom 7.8.14）。定位为错误排查手册。*

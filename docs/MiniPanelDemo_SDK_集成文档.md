@@ -75,7 +75,7 @@ maven { url "https://maven-other.tuya.com/repository/maven-commercial-releases/"
 ```gradle
 implementation 'com.thingclips.smart:thingsmart:7.8.0'
 api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:7.8.14")
-
+//必选
 implementation 'com.thingclips.smart:thingsmart-bizbundle-panel'
 implementation "com.thingclips.smart:thingsmart-bizbundle-basekit"
 implementation "com.thingclips.smart:thingsmart-bizbundle-bizkit"
@@ -84,9 +84,11 @@ api "com.thingclips.smart:thingsmart-bizbundle-miniapp"
 api "com.thingclips.smart:thingsmart-bizbundle-homekit"
 api "com.thingclips.smart:thingsmart-bizbundle-camera"
 api "com.thingclips.smart:thingsmart-bizbundle-ipckit"
+implementation 'com.thingclips.smart:thingsmart-ipcsdk:7.8.1'
+//非必须，自行选择
 implementation "com.thingclips.smart:thingsmart-bizbundle-family"
 api "com.thingclips.smart:thingsmart-bizbundle-device_activator"
-implementation 'com.thingclips.smart:thingsmart-ipcsdk:7.8.1'
+
 ```
 
 注意：

@@ -46,7 +46,7 @@ MiniApp SDK 让 **智能生活小程序** 运行在自有 Smart App 上：App �
 
 ## 二、面板小程序报错排查（标准流程）
 
-来源：[面板小程序报错排查](https://wiki.tuya-inc.com:7799/page/2036733014322450447)
+
 
 ### 2.1 收集信息
 
@@ -62,7 +62,7 @@ Debug 包：小程序页面 **长按右上角关闭按钮（X）**，弹窗中�
 
 ### 2.3 对比小程序声明的 kit
 
-平台：[https://mini.tuya-inc.com:7799/relevance](https://mini.tuya-inc.com:7799/relevance)  
+平台：小程序开发平台
 输入小程序 ID，查看小程序依赖的 kit 版本，与 App 逐项对比。
 
 **规则（核心）**：
@@ -105,7 +105,6 @@ Debug 包：小程序页面 **长按右上角关闭按钮（X）**，弹窗中�
 
 ## 三、APP 跳转小程序：客户端常见报错
 
-来源：[APP-跳转小程序问题](https://wiki.tuya-inc.com:7799/page/2038527549503438922)
 
 ### 3.1「app 版本无法支持此服务」
 
@@ -140,7 +139,6 @@ Debug 包：小程序页面 **长按右上角关闭按钮（X）**，弹窗中�
 
 ## 四、小程序启动错误码排查（云端 / Loki）
 
-来源：[小程序：启动错误码排查](https://wiki.tuya-inc.com:7799/page/1930436822635122749)
 
 ### 4.1 排查步骤
 
@@ -170,7 +168,6 @@ Debug 包：小程序页面 **长按右上角关闭按钮（X）**，弹窗中�
    - 小程序在 `thing_pbt_group_config` 侧声明的 kit **必须 ≤** 容器（App）kit。  
    - 查看 App kit：Debug 长按关闭按钮；或在 Loki 该接口请求参数中看 kit。  
 3. **特殊规则**：小程序声明的 kit 带 `rc`，而 App 对应 kit **不带 rc** → 视为不匹配。  
-4. 用 [relevance](https://mini.tuya-inc.com:7799/relevance) 核对小程序依赖。
 
 ---
 

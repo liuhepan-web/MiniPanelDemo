@@ -86,7 +86,7 @@ implementation "com.thingclips.smart:thingsmart-bizbundle-devicekit"
 #### 小程序 SDK / 能力包
 
 ```gradle
-api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:6.11.0")
+api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:7.8.14")
 implementation "com.thingclips.smart:thingsmart-bizbundle-miniapp"
 // 家庭 必选
 implementation 'com.thingclips.smart:thingsmart-bizbundle-homekit'
@@ -102,7 +102,7 @@ implementation "com.thingclips.smart:thingsmart-bizbundle-aistreamkit"
 
 | 依赖 | 作用 | Demo |
 |------|------|------|
-| `thingsmart-BizBundlesBom`（enforcedPlatform） | 业务包版本统一 | ✅ `6.11.0` |
+| `thingsmart-BizBundlesBom`（enforcedPlatform） | 业务包版本统一 | ✅ `7.8.14` |
 | `thingsmart-bizbundle-miniapp` | MiniApp 容器（必选） | ✅ |
 | `thingsmart-bizbundle-panel` | 设备控制面板 UI | ✅ |
 | `basekit` / `bizkit` / `devicekit` | 基础 / 业务 / 设备能力（必选） | ✅ |
@@ -273,30 +273,33 @@ Debug 包：小程序页面 **长按右上角关闭按钮（X）**，弹窗中�
 
 示例：小程序 Basekit `3.0.0`，App Basekit `2.9.0` → App < 小程序 → 失败。
 
-### 6.4 BizBundlesBom 6.11.0 参考 kit 一览（App 侧示例）
+### 6.4 BizBundlesBom 7.8.14 参考 kit 一览（App 侧示例）
 
 | npmName | version | PBTGroupName |
 |---------|---------|--------------|
-| BaseKit | 3.27.2 | TUNIBaseKit |
-| BizKit | 4.22.3 | TUNIBizKit |
-| DeviceKit | 4.23.0 | TUNIDeviceKit |
-| HomeKit | 3.10.1 | TUNIHomeKit |
-| MiniKit | 3.25.2 | TUNIMiniKit |
-| MapKit | 6.11.5 | TUNIMapKit |
-| MediaKit | 3.6.2 | TUNIMediaKit |
-| P2PKit | 6.4.2 | TUNIP2PKit |
-| IPCKit | 6.10.7 | TUNIIPCKit |
-| PlayNetKit | 1.3.31 | TUNIPlayNetKit |
-| AIKit | 1.6.0 | TUNIAIKit |
-| AIStreamKit | 1.3.5 | TUNIAIStreamKit |
+| WearKit | 3.0.4 | TUNIWearKit |
+| HomeKit | 3.17.3 | TUNIHomeKit |
 | SweeperKit | 2.0.0 | TUNISweeperKit |
-| WearKit | 1.6.31 | TUNIWearKit |
-| HealthKit | 6.6.0 | TUNIHealthKit |
-| LightKit | 1.0.16 | TUNILightKit |
-| MediaPlayerKit | 1.0.22 | TUNIMediaPlayerKit |
+| BizKit | 4.29.12 | TUNIBizKit |
+| IPCKit | 7.7.12 | TUNIIPCKit |
+| P2PKit | 7.7.6 | TUNIP2PKit |
+| MapKit | 7.8.2 | TUNIMapKit |
+| AIKit | 2.1.2 | TUNIAIKit |
+| PlayNetKit | 7.3.0 | TUNIPlayNetKit |
+| DeviceKit | 7.8.1 | TUNIDeviceKit |
+| BaseKit | 3.36.3 | TUNIBaseKit |
+| MediaKit | 3.6.3 | TUNIMediaKit |
+| HealthKit | 7.2.1 | TUNIHealthKit |
+| LightKit | 1.0.18 | TUNILightKit |
 | CategoryCommonBizKit | 6.4.1 | TUNICategoryCommonBizKit |
+| AIStreamKit | 2.2.2 | TUNIAIStreamKit |
+| ThirdPartyDeviceKit | 1.0.0-rc.4 | TUNIThirdPartyDeviceKit |
+| ThirdAuthKit | 1.0.14 | TUNIThirdAuthKit |
+| AVideoKit | 1.0.9 | TUNIAVideoKit |
+| MediaPlayerKit | 1.0.34 | TUNIMediaPlayerKit |
+| MiniKit | 3.33.1 | TUNIMiniKit |
 
-> 实际以长按 X 弹窗或 `thing_pbt_group_config.json`（业务包内置）为准；上表为 6.11.0 培训对照。
+> 实际以长按 X 弹窗或 `thing_pbt_group_config.json`（业务包内置）为准；上表为 7.8.14 培训对照（最新参考）。
 
 ---
 
@@ -477,4 +480,4 @@ A：关 `setDebugMode`、关 vConsole；勿日志输出 Token / uid 敏感细节
 
 ---
 
-*文档版本：基于 MiniPanelDemo2（BizBundlesBom 6.11.0）、官方集成文档与上述内部 Wiki 整理。*
+*文档版本：基于 MiniPanelDemo2（BizBundlesBom 7.8.14）、官方集成文档与上述内部 Wiki 整理。*

@@ -4,11 +4,9 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.facebook.soloader.SoLoader;
 import com.thing.smart.miniappclient.ThingMiniAppClient;
-import com.thingclips.smart.android.user.api.ILogoutCallback;
 import com.thingclips.smart.api.MicroContext;
 import com.thingclips.smart.api.router.UrlBuilder;
 import com.thingclips.smart.api.service.RedirectService;
@@ -66,22 +64,10 @@ public class AppLation extends Application {
         ThingHomeSdk.setOnNeedLoginListener(new INeedLoginListener() {
             @Override
             public void onNeedLogin(Context context) {
-
-                ThingHomeSdk.getUserInstance().logout(new ILogoutCallback() {
-                    @Override
-                    public void onSuccess() {
-                        //退出登录成功
-                        Toast.makeText(context, "退出成功", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onError(String errorCode, String errorMsg) {
-                    }
-                });
-
+                // Session expired / unauthorized: go login. Do not toast logout success here.
                 Intent intent = new Intent(context, DemoLoginActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                context.startActivity(intent);
             }
         });
         

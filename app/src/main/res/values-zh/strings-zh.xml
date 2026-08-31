@@ -3,6 +3,8 @@
 
     <string name="demo_app_name">小程序Demo</string>
     <string name="demo_login_error">登录失败 [%1$s] %2$s</string>
+    <string name="demo_login_empty">请输入账号和密码</string>
+    <string name="demo_auto_login_ing">正在自动登录…</string>
     <string name="demo_hub_subtitle">以下为同级入口。请先设置当前家庭（云端列表）。</string>
     <string name="demo_profile_title">个人信息（SDK）</string>
     <string name="demo_profile_fmt">昵称：%1$s\n邮箱：%2$s\n手机：%3$s</string>
@@ -86,7 +88,7 @@
     <string name="demo_home_create_success">创建成功</string>
     <string name="demo_home_create_fail">创建失败：%1$s</string>
 
-    <string name="demo_remember_credentials">记住账号和密码</string>
+    <string name="demo_remember_credentials">记住账号和密码（下次自动登录）</string>
 
     <string name="demo_remove_device_title">移除设备</string>
     <string name="demo_remove_device_message">确定从家庭移除该设备？</string>

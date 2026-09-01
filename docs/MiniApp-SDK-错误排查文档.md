@@ -210,7 +210,6 @@ A：关 `setDebugMode`、关 vConsole；勿日志输出 Token / uid 敏感细节
 ## 参考资料
 
 1. [MiniApp SDK 集成（安卓）](https://developer.tuya.com/cn/docs/app-development/mini-app-sdk-integration?id=Kcwzmgsmy3zg4)  
-2. [面板小程序报错排查](https://wiki.tuya-inc.com:7799/page/2036733014322450447)  
 ---
 
 *文档版本：基于 MiniPanelDemo（BizBundlesBom 7.8.14）。定位为错误排查手册。*
